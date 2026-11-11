@@ -1,0 +1,29 @@
+---
+import image from "../../assets/images/barden2.jpg";
+import { Icon } from "astro-icon/components";
+const socials = [
+    { href: "https://github.com/officialbarden", icon: "simple-icons:github" },
+    { href: "https://modrinth.com/user/barden", icon: "simple-icons:modrinth" },
+    { href: "https://www.youtube.com/@bardenslab", icon: "simple-icons:youtube" },
+    { href: "https://www.discord.gg/2ujVhE2s2e", icon: "simple-icons:discord" },
+];
+---
+
+<div class="flex flex-row rounded-full">
+    <img class="w-30" src={image.src} />
+    <div class="flex flex-col md:text-2xl w-full h-full gap-ui p-1">
+        <h1 class="flex-1 hover:bg-white/10 p-2 rounded-full">barden <span class="text-[15px]">(he/him)</span></h1>
+        <!-- Socials -->
+        <div class="flex gap-1 text-[20px] hover:bg-white/10 p-2 rounded-full">
+            {socials.map((socialLink) => (
+                <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={socialLink.href}
+                >
+                    <Icon name={socialLink.icon} />
+                </a>
+            ))}
+        </div>
+    </div>
+</div>

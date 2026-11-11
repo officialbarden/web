@@ -7,6 +7,7 @@
 @theme {
     --font-ui: var(--font-ui);
     --spacing-ui: 16px;
+    --radius-ui: 6px;
 }
 
 @layer base {
@@ -22,6 +23,13 @@
     opacity: 1.0;
     background-image: radial-gradient(#131212 0.5px, #010101 1px);
     background-size: 10px 10px;
+}
+
+@utility rendered-mdx {
+    @apply text-white;
+    h1 {
+        @apply text-2xl;
+    }
 }
 
 @font-face {

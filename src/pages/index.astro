@@ -1,32 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import image from "../assets/images/barden2.jpg";
-import { Icon } from "astro-icon/components";
 
-const socials = [
-    { href: "https://github.com/officialbarden", icon: "simple-icons:github" },
-    { href: "https://modrinth.com/user/barden", icon: "simple-icons:modrinth" },
-];
+// components
+import AboutMeWidget from '../components/Widgets/AboutMe.astro'
+import GeneratorWidget from '../components/Widgets/Generator.astro'
+import DocumentationWidget from '../components/Widgets/Documentation.astro'
+
+// texts
+import AboutMeText from '../components/Texts/AboutMe.mdx'
+
 ---
 
 <Layout title="barden | website">
     <main class="m-auto w-full md:px-100 md:py-35">
-        <div class="flex flex-row gap-ui items-center p-ui">
-            <img class="w-30" src={image.src} />
-            <div class="flex flex-col md:text-2xl w-full gap-ui">
-                <h1 class="flex-1">barden</h1>
-                <!-- Socials -->
-                <div class="flex gap-1 text-[20px]">
-                    {socials.map((socialLink) => (
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={socialLink.href}
-                        >
-                            <Icon name={socialLink.icon} />
-                        </a>
-                    ))}
+        <AboutMeWidget />
+
+        <!-- ABOUT ME -->
+        <div class="flex flex-col p-ui">
+            <h1 class="">About Me</h1>
+            <p class="text-white">
+                <div class="rendered-mdx">
+                    <AboutMeText />
                 </div>
+            </p>
+        </div>
+        
+        <!-- GENERATORS -->
+        <div class="flex flex-col p-ui">
+            <h1>Generators</h1>
+            <div class="flex flex-col">
+                <GeneratorWidget />
+            </div>
+        </div>
+
+        <!-- DOCS -->
+        <div class="flex flex-col p-ui">
+            <h1>Documentation / Tutorials</h1>
+            <div class="flex flex-col">
+                <DocumentationWidget />
+            </div>
+        </div>
+
+        <!-- BLOGS -->
+        <div class="flex flex-col p-ui">
+            <h1>Blogs</h1>
+            <div class="flex flex-col">
             </div>
         </div>
     </main>
