@@ -13,9 +13,9 @@ const socials = [
 ---
 
 <div class="flex flex-row rounded-full gap-ui">
-    <img class="w-30 rounded-full transition-all hover:border-green-700 duration-300 border-4 border-transparent" src={image} />
+    <img class="w-30 text-white/50 rounded-full transition-all hover:border-green-700 duration-300 border-4 border-transparent" src={image} />
     <div class="flex flex-col md:text-2xl justify-self-center w-full h-full py-5">
-        <h1 class="px-2">barden <span class="text-[15px]">(he/him)</span></h1>
+        <h1 class="px-2 text-white/50">barden <span class="text-[15px]">(he/him)</span></h1>
         <!-- Socials -->
         <div class="flex gap-1 text-[20px] w-fit hover:bg-white/10 p-2 rounded-full">
             {socials.map((socialLink) => (
@@ -23,6 +23,7 @@ const socials = [
                     target="_blank"
                     rel="noopener noreferrer"
                     href={socialLink.href}
+                    class="text-white/50 hover:text-white"
                 >
                     <Icon name={socialLink.icon} />
                 </a>

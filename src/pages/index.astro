@@ -13,12 +13,14 @@ import AboutMeText from '../components/Texts/AboutMe.mdx'
 
 <Layout title="barden | website">
     <main class="min-h-0 flex flex-col m-auto">
-        <AboutMeWidget />
-
+        <div class="my-5">
+            <AboutMeWidget />
+        </div>
+        
         <!-- ABOUT ME -->
         <div class="flex flex-col p-ui">
-            <h1 class="">About Me</h1>
-            <p class="text-white">
+            <h1 class="text-white/50">About Me</h1>
+            <p class="text-white/50">
                 <div class="rendered-mdx">
                     <AboutMeText />
                 </div>
@@ -27,25 +29,25 @@ import AboutMeText from '../components/Texts/AboutMe.mdx'
         
         <!-- GENERATORS -->
         <div class="flex flex-col p-ui">
-            <h1>Generators</h1>
-            <div class="flex flex-col">
+            <h1 class="text-white/50">Generators</h1>
+            <div class="flex flex-col text-white/50">
                 <GeneratorWidget />
             </div>
         </div>
 
         <!-- DOCS -->
         <div class="flex flex-col p-ui">
-            <h1>Documentation & Tutorials</h1>
-            <div class="flex flex-col">
+            <h1 class="text-white/50">Documentation & Tutorials</h1>
+            <div class="flex flex-col text-white/50">
                 <DocumentationWidget />
             </div>
         </div>
 
         <!-- BLOGS -->
-        <div class="flex flex-col p-ui">
-            <h1>Blogs</h1>
+        <!-- <div class="flex flex-col p-ui">
+            <h1 class="text-white/50">Blogs</h1>
             <div class="flex flex-col">
             </div>
-        </div>
+        </div> -->
     </main>
 </Layout>
